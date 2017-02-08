@@ -1,5 +1,8 @@
 <md-sidenav-container class="sidenav-container">
-  <md-sidenav #sidenav mode="over" opened="false" class="sidenav">
+  <md-sidenav #sidenav 
+    [opened]="!isScreenSmall()"
+    [mode]="isScreenSmall() ? 'over' : 'side'" 
+    class="sidenav">
     <div class="scrolling-content">
       Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
       fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
@@ -12,6 +15,7 @@
       Taciti dui, sapien consectetuer.
     </div>
   </md-sidenav>
+  <app-toolbar (sidebartoggle)="sidenav.toggle()"></app-toolbar>
   <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
     <md-icon>add</md-icon>
   </button>
