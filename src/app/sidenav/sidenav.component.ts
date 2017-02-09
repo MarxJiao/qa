@@ -8,13 +8,17 @@ const SMALL_WIDTH_BREAKPOINT = 840;
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-
+  activeitem: string = 'aboutme';
   constructor() { }
 
   ngOnInit() {
     window.addEventListener('resize', (size: UIEvent) => {
       this.isScreenSmall();
     })
+  }
+  getItem(item) {
+    console.log(item);
+    this.activeitem = item;
   }
 
   isScreenSmall(): boolean {

@@ -1,0 +1,10 @@
+.menulist {
+    width: 100%;
+    .menulist-item {
+        padding: 10px 30px;
+        color: #fff;
+        &.active {
+            background-color: red;
+        }
+    }
+}

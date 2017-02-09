@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { SidelistComponent } from './sidelist/sidelist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     ToolbarComponent,
-    AvatarComponent
+    AvatarComponent,
+    SidelistComponent
   ],
   imports: [
     BrowserModule,
