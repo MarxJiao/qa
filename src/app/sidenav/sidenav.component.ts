@@ -8,7 +8,8 @@ const SMALL_WIDTH_BREAKPOINT = 840;
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  activeitem: string = 'aboutme';
+  activeitem: string = '';
+  // activeitem: string = 'aboutme';
   constructor() { }
   sideOpen:boolean = !this.isScreenSmall();
   ngOnInit() {

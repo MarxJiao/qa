@@ -8,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ContentComponent implements OnInit {
   @Input('activeitem') set updateActiveitem(val) {
     if (document.getElementById(val)) {
-      window.location.hash = val;
-      // document.getElementById(val).scrollIntoView();
+      setTimeout(() => {
+        window.location.hash = val;
+      }, 500)
     }
   }
 

@@ -10,6 +10,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { SidelistComponent } from './sidelist/sidelist.component';
 import { ContentComponent } from './content/content.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentComponent } from './content/content.component';
     ToolbarComponent,
     AvatarComponent,
     SidelistComponent,
-    ContentComponent
+    ContentComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
