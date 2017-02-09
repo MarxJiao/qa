@@ -9,7 +9,7 @@ export class SidelistComponent implements OnInit {
 
   @Input() activeitem: string;
   @Output() changeItem = new EventEmitter<void>();
-
+  @Output() sidebartoggle = new EventEmitter<void>();
   list: any[] = [
     {
       name: 'aboutme',
@@ -39,6 +39,7 @@ export class SidelistComponent implements OnInit {
   }
 
   selectItem(itemName) {
+    this.sidebartoggle.emit();
     this.changeItem.emit(itemName);
     console.log(itemName);
   }

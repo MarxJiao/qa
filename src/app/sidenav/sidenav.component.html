@@ -1,11 +1,14 @@
 <md-sidenav-container class="sidenav-container">
   <md-sidenav #sidenav 
-    [opened]="!isScreenSmall()"
+    [opened]="sideOpen"
     [mode]="isScreenSmall() ? 'over' : 'side'" 
     class="sidenav">
     <div class="sidenav-holder">
       <!--<app-avatar></app-avatar>-->
-      <app-sidelist [activeitem]="activeitem" (changeItem)="getItem($event)"></app-sidelist>
+      <app-sidelist 
+        [activeitem]="activeitem" 
+        (changeItem)="getItem($event)"
+        (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-sidelist>
     </div>
     <div class="scrolling-content">
       Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
@@ -19,10 +22,11 @@
       Taciti dui, sapien consectetuer.
     </div>
   </md-sidenav>
-  <app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="sidenav.toggle()"></app-toolbar>
+  <app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-toolbar>
   <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
     <md-icon>add</md-icon>
   </button>
+  <app-content [activeitem]="activeitem"></app-content>
   <div class="scrolling-content">
     Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
     vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id,
