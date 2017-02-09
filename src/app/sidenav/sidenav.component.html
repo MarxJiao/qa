@@ -15,7 +15,7 @@
       Taciti dui, sapien consectetuer.
     </div>
   </md-sidenav>
-  <app-toolbar (sidebartoggle)="sidenav.toggle()"></app-toolbar>
+  <app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="sidenav.toggle()"></app-toolbar>
   <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
     <md-icon>add</md-icon>
   </button>
