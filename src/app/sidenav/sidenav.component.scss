@@ -1,6 +1,10 @@
 .sidenav-container {
     height: 100%;
+    
     .sidenav {
         max-width: 200px;
+        .sidenav-holder {
+            background-color: green;
+        }
     }
 }
