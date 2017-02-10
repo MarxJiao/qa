@@ -1,6 +1,8 @@
 .sidenav-container {
     height: 100%;
-    
+    md-sidenav {
+        position: fixed;
+    }
     .sidenav {
         max-width: 200px;
         .sidenav-holder {
