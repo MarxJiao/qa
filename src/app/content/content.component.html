@@ -18,10 +18,42 @@
   <div id="skills">
     <h1>bbb</h1>
     <div>
-      <md-grid-list  rowHeight="fit" cols="1">
-        <!--<md-grid-tile>-->
+      <div fxLayout='row-reverse'>
+        <div fxFlex="33" ></div>
+          <div fxFlex="33" [fxLayout]="direction" fxLayout.md="row">
+            sdfasdfas
+          </div>
+          <div fxFlex="33"    fxFlex.md="10px" fxHide.lg >aaaa</div>
+          <div fxFlex="33"   fxFlex.md="65"      >aaaa</div>
+          <div fxFlex="33"  fxFlex.md="25"   fxShow [fxHide.md]="hideBox" >aaaa</div>
+
+          <div fxFlex>aaaa</div>
+      </div>
+      <md-grid-list mdRowHeight="fit" cols="3">
+        <md-grid-tile >
             <app-card></app-card>
-        <!--</md-grid-tile>-->
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <app-card></app-card>
+        </md-grid-tile>
       </md-grid-list>
       
     </div>

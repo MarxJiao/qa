@@ -1,5 +1,4 @@
-<div class="sidenav-container">
-<!--<md-sidenav-container class="sidenav-container">-->
+<md-sidenav-container class="sidenav-container">
   <md-sidenav #sidenav 
     [opened]="sideOpen"
     [mode]="isScreenSmall() ? 'over' : 'side'" 
@@ -23,7 +22,7 @@
       Taciti dui, sapien consectetuer.
     </div>
   </md-sidenav>
-  <md-sidenav-layout>
+
     <app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-toolbar>
     <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
       <md-icon>add</md-icon>
@@ -48,7 +47,5 @@
       ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
       consectetuer.
     </div>
-  </md-sidenav-layout>
   
-<!--</md-sidenav-container>-->
-</div>
+</md-sidenav-container>

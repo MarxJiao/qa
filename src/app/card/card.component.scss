@@ -6,14 +6,16 @@
     }
     md-card-header {
         margin-left: -8px;
+        justify-content: space-between;
         md-card-title {
-            height: 40px;
-            line-height: 40px;
+            // height: 40px;
+            // line-height: 40px;
             font-size: 20px;
-            margin: 0;
+            margin-bottom: 10px;
         }
         .link-group {
-            float: right;
+            position: relative;
+            right: 0;
             height: 40px;
             width: 85px;
             line-height: 40px;
