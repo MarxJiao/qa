@@ -28,7 +28,7 @@ import { CardComponent } from './card/card.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot()
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
