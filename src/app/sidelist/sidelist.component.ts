@@ -1,5 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import {
+  CanActivate, Router,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  CanActivateChild,
+  NavigationExtras
+}                           from '@angular/router';
 @Component({
   selector: 'app-sidelist',
   templateUrl: './sidelist.component.html',
@@ -31,16 +37,23 @@ export class SidelistComponent implements OnInit {
       name: 'connect',
       content: '哈哈哈3'
     },
+    {
+      name: 'div',
+      content: '哈哈哈3'
+    },
   ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     console.log(this.activeitem);
   }
 
-  selectItem(itemName) {
-    this.sidebartoggle.emit();
-    this.changeItem.emit(itemName);
-    console.log(itemName);
+  async selectItem(itemName) {
+    
+    let navigationExtras: NavigationExtras = {
+      fragment: itemName
+    };
+    await this.router.navigate(['./content'], navigationExtras);
+    console.log(window.location.hash);
   }
 }

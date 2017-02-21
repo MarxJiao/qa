@@ -13,6 +13,8 @@ import { SidelistComponent } from './sidelist/sidelist.component';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
 
+import { RoutingModule } from './router.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { CardComponent } from './card/card.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
