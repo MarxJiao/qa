@@ -1,0 +1,17 @@
+.sidenav-container {
+    height: 100%;
+    md-sidenav {
+        position: fixed;
+    }
+    .sidenav {
+        max-width: 200px;
+        .sidenav-holder {
+            background-color: green;
+        }
+    }
+    app-toolbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+}

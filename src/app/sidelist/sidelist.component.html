@@ -1,0 +1,9 @@
+<ul class="menulist">
+  <li 
+    [ngClass]="{'active': item.name === activeitem}" 
+    class="menulist-item" 
+    *ngFor="let item of list"
+    (click)="selectItem(item.name)">
+    <a >{{item.content}}</a>
+  </li>
+</ul>
