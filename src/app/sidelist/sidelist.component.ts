@@ -48,12 +48,11 @@ export class SidelistComponent implements OnInit {
     console.log(this.activeitem);
   }
 
-  async selectItem(itemName) {
+  selectItem(itemName) {
     
     let navigationExtras: NavigationExtras = {
       fragment: itemName
     };
-    await this.router.navigate(['./content'], navigationExtras);
-    console.log(window.location.hash);
+    this.router.navigate(['./content'], navigationExtras);
   }
 }
