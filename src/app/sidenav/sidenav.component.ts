@@ -9,6 +9,7 @@ const SMALL_WIDTH_BREAKPOINT = 840;
 })
 export class SidenavComponent implements OnInit {
   activeitem: string = '';
+  close: boolean = false;
   // activeitem: string = 'aboutme';
   constructor() { }
   sideOpen:boolean = !this.isScreenSmall();

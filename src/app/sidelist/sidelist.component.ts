@@ -49,7 +49,12 @@ export class SidelistComponent implements OnInit {
   }
 
   selectItem(itemName) {
-    
+    console.log(itemName)
+    let ele = document.getElementById(itemName);
+    if (ele) {
+      document.getElementById(itemName).scrollIntoView();
+    }
+    this.sidebartoggle.emit();
     let navigationExtras: NavigationExtras = {
       fragment: itemName
     };

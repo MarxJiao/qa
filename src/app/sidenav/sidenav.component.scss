@@ -1,3 +1,26 @@
+.sidenav {
+    position: fixed;
+    width: 200px;
+    min-height: 100px;
+    overflow: auto;
+    background-color: rgba(0,0,0,.6);
+    .sidenav-holder {
+        max-width: 200px;
+        position: relative;
+        background: red;
+    }
+    &.side-xs {
+        width: 100%;
+        // left: -200px;
+    }
+    &.side-xs.close {
+        display: none;
+        .sidenav-holder {
+            left: -200px;
+        }
+    }
+}
+
 .sidenav-container {
     height: 100%;
     md-sidenav {

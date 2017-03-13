@@ -1,16 +1,28 @@
-<md-sidenav-container class="sidenav-container">
-  <md-sidenav #sidenav 
-    [opened]="sideOpen"
-    [mode]="isScreenSmall() ? 'over' : 'side'" 
-    class="sidenav">
+<div class="sidenav" 
+  [class.xs]="{'side-xs': true, 'close': close}" 
+  [class.sm]="{'side-xs': true, 'close': close}">
     <div class="sidenav-holder">
       <!--<app-avatar></app-avatar>-->
       <app-sidelist 
         [activeitem]="activeitem" 
         (changeItem)="getItem($event)"
-        (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-sidelist>
+        (sidebartoggle)="isScreenSmall()"></app-sidelist>
     </div>
-    <div class="scrolling-content">
+</div>
+
+<!--<md-sidenav-container class="sidenav-container">-->
+  <!--<md-sidenav #sidenav 
+    [opened]="sideOpen"
+    [mode]="isScreenSmall() ? 'over' : 'side'" 
+    class="sidenav">-->
+    <!--<div class="sidenav-holder">-->
+      <!--<app-avatar></app-avatar>-->
+      <!--<app-sidelist 
+        [activeitem]="activeitem" 
+        (changeItem)="getItem($event)"
+        (sidebartoggle)="isScreenSmall()"></app-sidelist>
+    </div>-->
+    <!--<div class="scrolling-content">
       
       Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
       fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
@@ -22,12 +34,12 @@
       tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
       Taciti dui, sapien consectetuer.
     </div>
-  </md-sidenav>
+  </md-sidenav>-->
 
-    <app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-toolbar>
+    <!--<app-toolbar *ngIf="isScreenSmall()" (sidebartoggle)="isScreenSmall() && sidenav.toggle()"></app-toolbar>
     <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
       <md-icon>add</md-icon>
-    </button>
-    <router-outlet></router-outlet>
+    </button>-->
+    
     <!--<app-content [activeitem]="activeitem"></app-content>-->
-</md-sidenav-container>
+<!--</md-sidenav-container>-->
